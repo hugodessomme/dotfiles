@@ -1,0 +1,95 @@
+{
+    // CHAT
+    "chat.editor.fontFamily": "Hack Nerd Font Mono",
+    "chat.editor.fontSize": 17,
+    "chat.editor.lineHeight": 28,
+    "chat.fontFamily": "Hack Nerd Font Mono",
+    "chat.fontSize": 17,
+    // ÉDITEUR
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.accessibilitySupport": "off",
+    "editor.fontFamily": "Hack Nerd Font Mono",
+    "editor.fontLigatures": false,
+    "editor.fontSize": 17,
+    "editor.formatOnPaste": false,
+    "editor.formatOnSave": false,
+    "editor.lineHeight": 28,
+    "editor.linkedEditing": true,
+    "editor.matchBrackets": "never",
+    "editor.minimap.autohide": "mouseover",
+    "editor.minimap.enabled": true,
+    "editor.minimap.renderCharacters": false,
+    "editor.minimap.scale": 1,
+    "editor.quickSuggestions": {
+        "strings": "on"
+    },
+    "editor.renderLineHighlight": "gutter",
+    "editor.snippetSuggestions": "inline",
+    "emmet.includeLanguages": {
+        "nunjucks": "html"
+    },
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+        "*.njk": "nunjucks"
+    },
+    "files.restoreUndoStack": false,
+    "files.trimTrailingWhitespace": true,
+    "git.autofetch": true,
+    "git.blame.editorDecoration.enabled": true,
+    "git.confirmSync": false,
+    "git.detectSubmodulesLimit": 50,
+    "git.mergeEditor": false,
+    "git.replaceTagsWhenPull": true,
+    "js/ts.updateImportsOnFileMove.enabled": "always",
+    "markdown.preview.fontSize": 16,
+    "security.workspace.trust.untrustedFiles": "open",
+    "workbench.activityBar.location": "top",
+    "workbench.colorTheme": "Night Wolf (black) (No Italics)",
+    "workbench.editor.restoreViewState": false,
+    "workbench.startupEditor": "none",
+    "workbench.tree.indent": 20,
+    "workbench.tree.renderIndentGuides": "always",
+    // TERMINAL
+    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+    "terminal.integrated.fontSize": 17,
+    // LANGAGES
+    "[css]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true
+    },
+    "[nunjucks]": {
+        "editor.formatOnSave": true
+    },
+    "[javascript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[javascriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[scss]": {
+        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.formatOnSave": true,
+        "editor.tabSize": 2
+    }
+}
