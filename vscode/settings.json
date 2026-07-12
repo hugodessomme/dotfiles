@@ -1,95 +1,102 @@
 {
-    // CHAT
-    "chat.editor.fontFamily": "Hack Nerd Font Mono",
-    "chat.editor.fontSize": 17,
-    "chat.editor.lineHeight": 28,
-    "chat.fontFamily": "Hack Nerd Font Mono",
-    "chat.fontSize": 17,
-    // ÉDITEUR
-    "diffEditor.ignoreTrimWhitespace": false,
-    "editor.accessibilitySupport": "off",
-    "editor.fontFamily": "Hack Nerd Font Mono",
-    "editor.fontLigatures": false,
-    "editor.fontSize": 17,
-    "editor.formatOnPaste": false,
-    "editor.formatOnSave": false,
-    "editor.lineHeight": 28,
-    "editor.linkedEditing": true,
-    "editor.matchBrackets": "never",
-    "editor.minimap.autohide": "mouseover",
-    "editor.minimap.enabled": true,
-    "editor.minimap.renderCharacters": false,
-    "editor.minimap.scale": 1,
-    "editor.quickSuggestions": {
-        "strings": "on"
-    },
-    "editor.renderLineHighlight": "gutter",
-    "editor.snippetSuggestions": "inline",
-    "emmet.includeLanguages": {
-        "nunjucks": "html"
-    },
-    "explorer.compactFolders": false,
-    "explorer.confirmDelete": false,
-    "explorer.confirmDragAndDrop": false,
-    "extensions.ignoreRecommendations": true,
-    "files.associations": {
-        "*.njk": "nunjucks"
-    },
-    "files.restoreUndoStack": false,
-    "files.trimTrailingWhitespace": true,
-    "git.autofetch": true,
-    "git.blame.editorDecoration.enabled": true,
-    "git.confirmSync": false,
-    "git.detectSubmodulesLimit": 50,
-    "git.mergeEditor": false,
-    "git.replaceTagsWhenPull": true,
-    "js/ts.updateImportsOnFileMove.enabled": "always",
-    "markdown.preview.fontSize": 16,
-    "security.workspace.trust.untrustedFiles": "open",
-    "workbench.activityBar.location": "top",
-    "workbench.colorTheme": "Night Wolf (black) (No Italics)",
-    "workbench.editor.restoreViewState": false,
-    "workbench.startupEditor": "none",
-    "workbench.tree.indent": 20,
-    "workbench.tree.renderIndentGuides": "always",
-    // TERMINAL
-    "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
-    "terminal.integrated.fontSize": 17,
-    // LANGAGES
-    "[css]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[html]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true
-    },
-    "[nunjucks]": {
-        "editor.formatOnSave": true
-    },
-    "[javascript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[javascriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[scss]": {
-        "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[typescript]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    },
-    "[typescriptreact]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode",
-        "editor.formatOnSave": true,
-        "editor.tabSize": 2
-    }
+  // Chat
+  "chat.editor.fontFamily": "Hack Nerd Font Mono",
+  "chat.editor.fontSize": 17,
+  "chat.editor.lineHeight": 28,
+  "chat.fontFamily": "Hack Nerd Font Mono",
+  "chat.fontSize": 17,
+  // Éditeur
+  "accessibility.underlineLinks": true,
+  "diffEditor.ignoreTrimWhitespace": false,
+  "editor.accessibilitySupport": "off",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.fontFamily": "Hack Nerd Font Mono",
+  "editor.fontLigatures": false,
+  "editor.fontSize": 17,
+  "editor.formatOnPaste": false,
+  "editor.formatOnSave": false,
+  "editor.lineHeight": 28,
+  "editor.linkedEditing": true,
+  "editor.matchBrackets": "never",
+  "editor.minimap.autohide": "mouseover",
+  "editor.minimap.enabled": true,
+  "editor.minimap.renderCharacters": false,
+  "editor.minimap.scale": 1,
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "editor.renderLineHighlight": "gutter",
+  "editor.snippetSuggestions": "inline",
+  "emmet.includeLanguages": {
+    "nunjucks": "html"
+  },
+  "explorer.compactFolders": false,
+  "explorer.confirmDelete": false,
+  "explorer.confirmDragAndDrop": false,
+  "extensions.ignoreRecommendations": true,
+  "files.associations": {
+    "*.njk": "nunjucks"
+  },
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/Thumbs.db": true,
+    "**/.next": true
+  },
+  "files.insertFinalNewline": true,
+  "files.restoreUndoStack": false,
+  "files.trimFinalNewlines": true,
+  "files.trimTrailingWhitespace": true,
+  "files.watcherExclude": {
+    "**/.git/objects/**": true,
+    "**/.git/subtree-cache/**": true,
+    "**/node_modules/*/**": true,
+    "**/.hg/store/**": true,
+    "**/public/**": true,
+    "**/tmp": true
+  },
+  "git.autofetch": true,
+  "git.blame.editorDecoration.enabled": true,
+  "git.confirmSync": false,
+  "git.detectSubmodulesLimit": 50,
+  "git.mergeEditor": false,
+  "git.replaceTagsWhenPull": true,
+  "js/ts.updateImportsOnFileMove.enabled": "always",
+  "markdown.preview.fontSize": 16,
+  "search.useParentIgnoreFiles": true,
+  "security.workspace.trust.untrustedFiles": "open",
+  "telemetry.telemetryLevel": "off",
+  "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
+  "workbench.activityBar.location": "top",
+  "workbench.colorTheme": "Night Wolf (black) (No Italics)",
+  "workbench.editor.restoreViewState": false,
+  "workbench.enableExperiments": false,
+  "workbench.settings.enableNaturalLanguageSearch": false,
+  "workbench.startupEditor": "none",
+  "workbench.tree.indent": 20,
+  "workbench.tree.renderIndentGuides": "always",
+  // Terminal
+  "terminal.integrated.fontFamily": "Hack Nerd Font Mono",
+  "terminal.integrated.fontSize": 17,
+  "terminal.integrated.gpuAcceleration": "on",
+  "terminal.integrated.hideOnStartup": "always",
+  "terminal.integrated.initialHint": false,
+  "terminal.integrated.stickyScroll.enabled": false,
+  "terminal.integrated.tabs.enableAnimation": false,
+  "terminal.integrated.tabs.showActions": "always",
+  // Langages
+  "[css][html][nunjucks]": {
+    "editor.tabSize": 4
+  },
+  "[github-actions-workflow]": {
+    "editor.insertSpaces": true,
+    "editor.autoIndent": "advanced",
+    "diffEditor.ignoreTrimWhitespace": false
+  },
+  "[json][jsonc]": {
+    "editor.tabSize": 4
+  },
+  "[scss]": {
+    "editor.defaultFormatter": "sibiraj-s.vscode-scss-formatter"
+  }
 }
