@@ -156,10 +156,12 @@ brew update
 
 ```bash
 brew install --cask \
+  alt-tab \
   brave-browser \
   claude-code \
   codex \
   font-hack-nerd-font \
+  hiddenbar \
   iterm2 \
   raycast \
   visual-studio-code \
@@ -292,6 +294,21 @@ sshn
 gh auth login # à adapter par service
 ```
 
+## AltTab
+
+**Apparence**
+
+- Taille : `Petite`
+- Personnaliser davantage
+  - Masquer les icônes d'état : `Activé`
+  - Masquer les numéros de Bureau : `Activé`
+  - Masquer les cercles colorés au survol de la souris : `Activé`
+  - Afficher les titres : `Nom de l'application`
+
+**Contrôles** → Raccourci 1 → Déclencheur : `Command + Tab`
+
+**Général** → Icône de la barre des menus : `Sur fond blanc`
+
 ## Brave Browser
 
 **Paramètres**
@@ -340,7 +357,14 @@ gh auth login # à adapter par service
   - Afficher un rappel en plein écran indiquant d'appuyer sur Esc pour quitter : `Désactivé`
   - Économiseur de mémoire : `Activé`
 
+## Hidden Bar
+
+**Réglages** → Démarrer automatiquement Hidden Bar lors de la connexion : `Activé`
+
 ## Raycast
+
+- **Réglages système** → Clavier → Raccourcis clavier → Spotlight : `Désactivé`
+- Déplacer les icônes de la barre de menu à masquer
 
 **Extensions** → Hotkey
 
