@@ -3,37 +3,50 @@ unalias gswm 2>/dev/null
 
 # supprime les branches locales retirées du dépôt
 gfp() {
-	git fetch --prune
+	gf --prune
 	git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads |
 		grep '\[gone\]' |
 		awk '{print $1}' |
 		while IFS= read -r branch; do
-			git branch -D "$branch"
+			gbD "$branch"
 		done
 }
 
-# créé une merge request
+# crée une merge request
 gmr() {
-	if [[ $# -lt 2 ]]; then
-		echo "Usage: gmr <type> <slug-description> [jira-id]"
+	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+		echo "Usage : gmr <type> <slug-description> [issue-id]"
 		return 0
 	fi
 
-	local template_path=".gitlab/merge_request_templates/Default.md"
 	local type="$1"
 	local slug_description="$2"
-	local jira_id="$3"
+	local issue_id="$3"
 
 	local branch="${type}/${slug_description}"
-	[[ -n "$jira_id" ]] && branch="${branch}-${jira_id}"
+	[[ -n "$issue_id" ]] && branch="${branch}-${issue_id}"
 
 	gswc "$branch" || return 1
 	gp -u origin "$branch" || return 1
 
-	local mr_description
-	mr_description=$(
+	local remote_url="$(git remote get-url origin)"
+	local template_path platform
+
+	if [[ "$remote_url" == *"github.com"* ]]; then
+		platform="github"
+		template_path=".github/PULL_REQUEST_TEMPLATE.md"
+	elif [[ "$remote_url" == *"gitlab"* ]]; then
+		platform="gitlab"
+		template_path=".gitlab/merge_request_templates/default.md"
+	else
+		echo "Remote non reconnu : $remote_url"
+		return 1
+	fi
+
+	local description
+	description=$(
 		{
-			[[ -n "$jira_id" ]] && echo "Closes JIRA#STUDIOD-${jira_id}"
+			[[ -n "$issue_id" ]] && echo "Closes ${issue_id}"
 			echo
 			[[ -f "$template_path" ]] && cat "$template_path"
 		}
@@ -41,25 +54,33 @@ gmr() {
 
 	local target_branch="$(git_main_branch)"
 
-	glab mr create \
-		--assignee @me \
-		--description "$mr_description" \
-		--draft \
-		--no-editor \
-		--remove-source-branch \
-		--target-branch "$target_branch" \
-		--title "$branch" \
-		--yes
+	if [[ "$platform" == "github" ]]; then
+		gh pr create \
+			--assignee @me \
+			--base "$target_branch" \
+			--body "$description" \
+			--draft \
+			--title "$branch"
+	else
+		glab mr create \
+			--description "$description" \
+			--draft \
+			--no-editor \
+			--remove-source-branch \
+			--target-branch "$target_branch" \
+			--title "$branch" \
+			--yes
+	fi
 }
 
 # bascule sur la branche principale et récupère les modifications du dépôt
 gswm() {
-	git switch $(git_main_branch)
+	gsw $(git_main_branch)
 	gpr
 	gfp
 }
 
-# créé une clé SSH
+# crée une clé SSH
 sshn() {
 	local name passphrase host user key
 
@@ -118,28 +139,44 @@ EOF
 
 # copie une clé SSH
 sshg() {
-	local name="$1"
-
-	if [[ -n "$name" && -f "$HOME/.ssh/$name.pub" ]]; then
-		pbcopy <"$HOME/.ssh/$name.pub"
-		echo "La clé '$name' a bien été copiée dans le presse-papier."
+	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+		echo "Usage : sshg [name]"
 		return 0
 	fi
 
-	echo "Clés SSH existantes :"
-	echo
-	for key in "$HOME"/.ssh/*.pub; do
-		[[ -f "$key" ]] || continue
-		basename "$key" .pub
-	done
+	local name="$1"
+
+	if [[ -z "$name" ]]; then
+		echo "Clés SSH existantes :"
+		echo
+		for key in "$HOME"/.ssh/*.pub; do
+			[[ -f "$key" ]] || continue
+			basename "$key" .pub
+		done
+		return 0
+	fi
+
+	pbcopy <"$HOME/.ssh/$name.pub"
+	echo "La clé '$name' a bien été copiée dans le presse-papier."
 }
 
 # supprime une clé SSH
 sshrm() {
+	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
+		echo "Usage : sshrm <name>"
+		return 0
+	fi
+
 	local name="$1"
+
+	if [[ -z "$name" ]]; then
+		sshg
+		return 1
+	fi
+
 	local key="$HOME/.ssh/$name"
 
-	if [[ -z "$name" || ! -f "$key.pub" ]]; then
+	if [[ ! -f "$key.pub" ]]; then
 		sshg
 		return 1
 	fi

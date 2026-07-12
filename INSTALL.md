@@ -247,6 +247,16 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:
 source ~/.zshrc
 ```
 
+**Alias disponibles**
+
+```bash
+# lister tous les alias (hors fonctions)
+alias
+
+# afficher le fichier des alias personnalisés
+cat ~/.oh-my-zsh/custom/aliases.zsh
+```
+
 ## Git
 
 Définir les informations globales
@@ -271,6 +281,15 @@ nvm install --lts
 npm config set init-author-name "<nom>"
 npm config set init-author-email "<email>"
 npm config set init-author-url "<site-web>"
+```
+
+## SSH
+
+Créer une clé SSH pour chaque service (ex : github)
+
+```bash
+sshn
+gh auth login # à adapter par service
 ```
 
 ## Brave Browser
