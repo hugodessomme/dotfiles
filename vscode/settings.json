@@ -28,6 +28,7 @@
   "editor.renderLineHighlight": "gutter",
   "editor.snippetSuggestions": "inline",
   "editor.tabSize": 2,
+  "editor.unicodeHighlight.includeComments": false,
   "emmet.includeLanguages": {
     "nunjucks": "html"
   },
