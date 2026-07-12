@@ -13,8 +13,8 @@
   "editor.fontFamily": "Hack Nerd Font Mono",
   "editor.fontLigatures": false,
   "editor.fontSize": 17,
-  "editor.formatOnPaste": false,
-  "editor.formatOnSave": false,
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
   "editor.lineHeight": 28,
   "editor.linkedEditing": true,
   "editor.matchBrackets": "never",
@@ -27,6 +27,7 @@
   },
   "editor.renderLineHighlight": "gutter",
   "editor.snippetSuggestions": "inline",
+  "editor.tabSize": 2,
   "emmet.includeLanguages": {
     "nunjucks": "html"
   },
@@ -87,11 +88,6 @@
   // Langages
   "[css][html][nunjucks]": {
     "editor.tabSize": 4
-  },
-  "[github-actions-workflow]": {
-    "editor.insertSpaces": true,
-    "editor.autoIndent": "advanced",
-    "diffEditor.ignoreTrimWhitespace": false
   },
   "[json][jsonc]": {
     "editor.tabSize": 4
