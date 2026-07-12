@@ -146,7 +146,7 @@ killall Finder
 /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
-- Mettre Homebrew à jour
+- Mettre à jour
 
 ```bash
 brew update
@@ -177,6 +177,7 @@ brew install \
   glab \
   jq \
   nvm \
+  shfmt \
   starship
 ```
 
@@ -220,12 +221,11 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 omz update
 ```
 
-- Copier le `.zshrc`, `aliases.zsh` et `functions.zsh`
+- Copier le `.zshrc` et `aliases.zsh`
 
 ```bash
 curl -fsSL https://raw.githubusercontent.com/hugodessomme/dotfiles/main/zsh/.zshrc -o ~/.zshrc
 curl -fsSL https://raw.githubusercontent.com/hugodessomme/dotfiles/main/zsh/aliases.zsh -o ~/.oh-my-zsh/custom/aliases.zsh
-curl -fsSL https://raw.githubusercontent.com/hugodessomme/dotfiles/main/zsh/functions.zsh -o ~/.oh-my-zsh/custom/functions.zsh
 ```
 
 - Installer les plugins
@@ -249,7 +249,7 @@ source ~/.zshrc
 
 ## Git
 
-- Définir les informations globales
+Définir les informations globales
 
 ```bash
 git config --global user.name "<nom>"
@@ -367,6 +367,7 @@ code \
   --install-extension esbenp.prettier-vscode \
   --install-extension maosantaella.night-wolf \
   --install-extension mikestead.dotenv \
+  --install-extension mkhl.shfmt \
   --install-extension naumovs.color-highlight \
   --install-extension openai.chatgpt \
   --install-extension sibiraj-s.vscode-scss-formatter \
@@ -375,7 +376,6 @@ code \
   --install-extension vincaslt.highlight-matching-tag \
   --install-extension yoavbls.pretty-ts-errors
 ```
-
 
 - Copier le `settings.json`
 
