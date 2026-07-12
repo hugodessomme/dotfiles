@@ -359,12 +359,12 @@ gh auth login # à adapter par service
 
 ## Hidden Bar
 
-**Réglages** → Démarrer automatiquement Hidden Bar lors de la connexion : `Activé`
+- **Réglages** → Démarrer automatiquement Hidden Bar lors de la connexion : `Activé`
+- Déplacer les icônes de la barre de menu à masquer
 
 ## Raycast
 
-- **Réglages système** → Clavier → Raccourcis clavier → Spotlight : `Désactivé`
-- Déplacer les icônes de la barre de menu à masquer
+**Réglages système** → Clavier → Raccourcis clavier → Spotlight : `Désactivé`
 
 **Extensions** → Hotkey
 
