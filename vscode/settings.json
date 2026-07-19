@@ -71,7 +71,7 @@
   // "activeRepositoryBranchName" n'est pas mis à jour au changement de branche en appelant
   // un alias zsh dans le terminal (ex : gb, gsw, etc.), mais on l'utilise en espérant un
   // correctif côté VS Code (solution "Git: Refresh")
-  "window.title": "⌥${activeRepositoryBranchName}${separator}${activeEditorShort}",
+  "window.title": "⌥ ${activeRepositoryBranchName}${separator}${activeEditorShort}",
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Night Wolf (black) (No Italics)",
   "workbench.editor.restoreViewState": false,
