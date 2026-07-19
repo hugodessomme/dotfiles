@@ -393,9 +393,10 @@ gh auth login # à adapter par service
 
 **Extensions** → Hotkey
 
-- Brave Browser : `Option + B`
-- Visual Studio Code : `Option + C`
-- iTerm2 : `Option + T`
+- Brave Browser : `option + b`
+- ChatGPT : `option + i`
+- iTerm2 : `option + t`
+- Visual Studio Code : `option + c`
 
 **Create Quicklink**
 
