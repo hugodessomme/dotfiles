@@ -175,7 +175,7 @@ brew install --cask \
   alt-tab \
   brave-browser \
   claude-code \
-  codex \
+  chatgpt \
   font-hack-nerd-font \
   hiddenbar \
   iterm2 \
@@ -407,6 +407,7 @@ gh auth login # à adapter par service
 
 **Create Snippet**
 
+- Renseigner la même valeur pour `Name` et `Keyword`
 - `@imaddr` : `<adresse-postale>`
 - `@imemail` : `<email>`
 - `@imtel` : `<numero-telephone>`
