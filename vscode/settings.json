@@ -68,13 +68,17 @@
   "search.useParentIgnoreFiles": true,
   "security.workspace.trust.untrustedFiles": "open",
   "telemetry.telemetryLevel": "off",
-  "window.title": "${activeEditorMedium}${separator}${rootName} ${dirty}",
+  // "activeRepositoryBranchName" n'est pas mis à jour au changement de branche en appelant
+  // un alias zsh dans le terminal (ex : gb, gsw, etc.), mais on l'utilise en espérant un
+  // correctif côté VS Code (solution "Git: Refresh")
+  "window.title": "⌥${activeRepositoryBranchName}${separator}${activeEditorShort}",
   "workbench.activityBar.location": "top",
   "workbench.colorTheme": "Night Wolf (black) (No Italics)",
   "workbench.editor.restoreViewState": false,
   "workbench.enableExperiments": false,
   "workbench.settings.enableNaturalLanguageSearch": false,
   "workbench.startupEditor": "none",
+  "workbench.statusBar.visible": false,
   "workbench.tree.indent": 20,
   "workbench.tree.renderIndentGuides": "always",
   // Terminal
@@ -99,5 +103,4 @@
   "[shellscript]": {
     "editor.defaultFormatter": "mkhl.shfmt"
   }
-  // À trier
 }
