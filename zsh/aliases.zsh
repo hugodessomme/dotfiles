@@ -12,7 +12,7 @@ gfp() {
 		done
 }
 
-# crée une merge request
+# crée une merge request (github ou gitlab)
 gmr() {
 	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 		echo "Usage : gmr <type> <slug-description> [issue-id]"
@@ -140,7 +140,7 @@ EOF
 # copie une clé SSH
 sshg() {
 	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
-		echo "Usage : sshg [name]"
+		echo "Usage : sshg <name>"
 		return 0
 	fi
 
