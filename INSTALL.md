@@ -2,6 +2,22 @@
 
 Inspiré du [guide de Robin Wieruch](https://www.robinwieruch.de/mac-setup-web-development/), adapté à mes préférences
 
+## Sommaire
+
+- [Réglages système](#réglages-système)
+- [Finder](#finder)
+- [Homebrew](#homebrew)
+- [iTerm2](#iterm2)
+- [Oh My Zsh](#oh-my-zsh)
+- [Git](#git)
+- [NVM pour Node/npm](#nvm-pour-nodenpm)
+- [SSH](#ssh)
+- [AltTab](#alttab)
+- [Brave Browser](#brave-browser)
+- [Hidden Bar](#hidden-bar)
+- [Raycast](#raycast)
+- [VSCode](#vscode)
+
 ## Réglages système
 
 **Général** → AirDrop et Continuité → AirDrop : `Contacts uniquement`
@@ -15,9 +31,9 @@ Inspiré du [guide de Robin Wieruch](https://www.robinwieruch.de/mac-setup-web-d
 - Dock
   - Réduire la taille du Dock
   - Animation de réduction des fenêtres : `Effet d'échelle`
-  - Réduire les fenêtres dans l'icône de l'application : `Activé`
+  - Minimiser les fenêtres dans l'icône de l'application : `Activé`
   - Masquer et afficher automatiquement le Dock : `Activé`
-  - Animer les applications lors de leur réouverture : `Désactivé`
+  - Animer les applications lors de leur ouverture : `Désactivé`
   - Afficher les apps suggérées et récentes dans le Dock : `Désactivé`
 - Bureau et Stage Manager
   - Désactiver tous les éléments du bureau
@@ -26,8 +42,6 @@ Inspiré du [guide de Robin Wieruch](https://www.robinwieruch.de/mac-setup-web-d
 - Fenêtres
   - Fermer les fenêtres à la fermeture d'une application : `Désactivé`
   - Coins actifs : `Tout désactiver`
-
-**Fond d'écran** → Couleur : `Noir`
 
 **Moniteurs**
 
@@ -38,14 +52,14 @@ Inspiré du [guide de Robin Wieruch](https://www.robinwieruch.de/mac-setup-web-d
   - Programme : `Personnalisé (21:30 → 07:00)`
   - Température des couleurs : `Plus chaudes`
 
+**Fond d'écran** → Couleur : `Noir`
+
 **Spotlight**
 
 - Afficher le contenu associé : `Désactivé`
 - Aider Apple à améliorer la recherche : `Désactivé`
 
 **Notifications** : Désactiver les notifications de toutes les applications
-
-**Confidentialité et sécurité** → FileVault : `Activé`
 
 **Son**
 
@@ -56,6 +70,8 @@ Inspiré du [guide de Robin Wieruch](https://www.robinwieruch.de/mac-setup-web-d
 
 - Éteindre l'écran sur batterie en cas d'inactivité : `5 minutes`
 - Éteindre l'écran sur adaptateur secteur en cas d'inactivité : `Jamais`
+
+**Confidentialité et sécurité** → FileVault : `Activé`
 
 **Game Center** : Désactiver Game Center
 
@@ -197,7 +213,6 @@ brew install \
   - Window → Native full screen windows : `Désactivé`
 - Appearance
   - Windows → Hide scrollbars : `Activé`
-  - Tabs → Show tab bar in fullscreen : `Désactivé`
   - Dimming : Désactiver toutes les options
 - Profiles
   - General → Initial Directory → Advanced Configuration : `Reuse previous session's directory`
@@ -316,9 +331,7 @@ gh auth login # à adapter par service
 - Premiers pas → Personnaliser la page de nouvel onglet
   - Image de fond → Afficher les images d'arrière-plan : `Désactivé`
   - Rechercher → Afficher le widget du moteur de recherche dans les nouveaux onglets : `Désactivé`
-  - Mes sites
-    - Afficher mes sites : `Désactivé`
-    - Favoris : `Activé`
+  - Mes sites → Favoris : `Activé`
   - Horloge → Afficher l'horloge : `Activé`
   - Modules : `Désactivé`
 - Apparence
@@ -359,7 +372,10 @@ gh auth login # à adapter par service
 
 ## Hidden Bar
 
-- **Réglages** → Démarrer automatiquement Hidden Bar lors de la connexion : `Activé`
+**Réglages**
+
+- Démarrer automatiquement Hidden Bar lors de la connexion : `Activé`
+- Afficher les réglages au lancement : `Désactivé`
 - Déplacer les icônes de la barre de menu à masquer
 
 ## Raycast
