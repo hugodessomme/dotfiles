@@ -1,7 +1,7 @@
-# retire l'alias "gswm" au profit de "gswm()"
+# Retire l'alias "gswm" au profit de "gswm()"
 unalias gswm 2>/dev/null
 
-# supprime les branches locales retirées du dépôt
+# Supprime les branches locales retirées du dépôt
 gfp() {
 	gf --prune
 	git for-each-ref --format='%(refname:short) %(upstream:track)' refs/heads |
@@ -12,7 +12,7 @@ gfp() {
 		done
 }
 
-# crée une merge request (github ou gitlab)
+# Crée une merge request (github ou gitlab)
 gmr() {
 	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 		echo "Usage : gmr <type> <slug-description> [issue-id]"
@@ -73,14 +73,14 @@ gmr() {
 	fi
 }
 
-# bascule sur la branche principale et récupère les modifications du dépôt
+# Bascule sur la branche principale et récupère les modifications du dépôt
 gswm() {
 	gsw $(git_main_branch)
 	gpr
 	gfp
 }
 
-# crée une clé SSH
+# Crée une clé SSH
 sshn() {
 	local name passphrase host user key
 
@@ -137,7 +137,7 @@ EOF
 	echo "La clé '$name' a bien été ajoutée et copiée dans le presse-papier."
 }
 
-# copie une clé SSH
+# Copie une clé SSH
 sshg() {
 	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 		echo "Usage : sshg <name>"
@@ -160,7 +160,7 @@ sshg() {
 	echo "La clé '$name' a bien été copiée dans le presse-papier."
 }
 
-# supprime une clé SSH
+# Supprime une clé SSH
 sshrm() {
 	if [[ "$1" == "--help" || "$1" == "-h" ]]; then
 		echo "Usage : sshrm <name>"

@@ -276,12 +276,12 @@ cat ~/.oh-my-zsh/custom/aliases.zsh
 
 | Alias                                      | Description                                                              |
 | ------------------------------------------ | ------------------------------------------------------------------------ |
-| `gfp`                                      | supprime les branches locales retirées du dépôt                          |
-| `gmr <type> <slug-description> [issue-id]` | crée une merge request (github ou gitlab)                                |
-| `gswm`                                     | bascule sur la branche principale et récupère les modifications du dépôt |
-| `sshn`                                     | crée une clé SSH                                                         |
-| `sshg <name>`                              | copie une clé SSH                                                        |
-| `sshrm <name>`                             | supprime une clé SSH                                                     |
+| `gfp`                                      | Supprime les branches locales retirées du dépôt                          |
+| `gmr <type> <slug-description> [issue-id]` | Crée une merge request (github ou gitlab)                                |
+| `gswm`                                     | Bascule sur la branche principale et récupère les modifications du dépôt |
+| `sshn`                                     | Crée une clé SSH                                                         |
+| `sshg <name>`                              | Copie une clé SSH                                                        |
+| `sshrm <name>`                             | Supprime une clé SSH                                                     |
 
 ## Git
 
