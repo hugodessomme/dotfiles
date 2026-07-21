@@ -102,5 +102,8 @@
   },
   "[shellscript]": {
     "editor.defaultFormatter": "mkhl.shfmt"
-  }
+  },
+  // Extensions
+  "peacock.affectActivityBar": false,
+  "peacock.affectTabActiveBorder": true
 }

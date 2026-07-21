@@ -435,6 +435,7 @@ code \
   --install-extension dbaeumer.vscode-eslint \
   --install-extension editorconfig.editorconfig \
   --install-extension esbenp.prettier-vscode \
+  --install-extension johnpapa.vscode-peacock \
   --install-extension maosantaella.night-wolf \
   --install-extension mikestead.dotenv \
   --install-extension mkhl.shfmt \
